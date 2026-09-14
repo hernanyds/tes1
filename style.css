@@ -1,145 +1,490 @@
-/* Reset margin & padding dasar */
+/* ==========================================================================
+   PALET DESAIN 2 WARNA: HIJAU EMERALD & PUTIH
+   Hanya menggunakan 2 warna di seluruh stylesheet
+   ========================================================================== */
+:root {
+    --color-emerald: #047857;
+    --color-white: #ffffff;
+}
+
+/* Reset Dasar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Pengaturan tampilan body */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
-    line-height: 1.6;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Navigasi bagian atas */
-nav {
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--color-white);
+    color: var(--color-emerald);
+    line-height: 1.65;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Seleksi Teks */
+::selection {
+    background-color: var(--color-emerald);
+    color: var(--color-white);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-white);
+    border-left: 2px solid var(--color-emerald);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-emerald);
+}
+
+/* Container Umum */
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section {
+    padding: 70px 0;
+}
+
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+.navbar-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--color-emerald);
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 10%;
-    background-color: #0f172a;
-    color: white;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 16px 24px;
 }
 
-nav ul {
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--color-emerald);
+}
+
+.logo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: var(--color-emerald);
+    color: var(--color-white);
+    font-weight: 800;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 2px solid var(--color-emerald);
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.logo:hover .logo-mark {
+    background-color: var(--color-white);
+    color: var(--color-emerald);
+    transform: rotate(-6deg);
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo-text span {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.nav-links {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 8px;
 }
 
-nav a {
-    color: #cbd5e1;
+.nav-link {
+    display: inline-block;
+    color: var(--color-emerald);
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-
-nav a:hover {
-    color: white;
-}
-
-/* Bagian Hero (Home) */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(180deg, #e0f2fe 0%, #f8fafc 100%);
-}
-
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 12px;
-}
-
-.hero span {
-    color: #2563eb;
-}
-
-.hero p {
-    font-size: 18px;
-    color: #475569;
-}
-
-/* Pengaturan Tombol */
-button {
-    margin-top: 15px;
-    padding: 10px 22px;
-    font-size: 15px;
     font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    background-color: #2563eb;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
 }
 
-button:hover {
-    background-color: #1d4ed8;
+.nav-link:hover {
+    background-color: var(--color-emerald);
+    color: var(--color-white);
+    border-color: var(--color-emerald);
 }
 
-button:active {
-    transform: scale(0.98);
-}
-
-/* Bagian Tentang & Kontak */
-.about,
-.contact {
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+    padding: 90px 0 70px 0;
     text-align: center;
-    padding: 50px 20px;
-    max-width: 650px;
-    margin: 0 auto;
+    background-color: var(--color-white);
 }
 
-.about h2,
-.contact h2 {
-    margin-bottom: 15px;
-    color: #0f172a;
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.about p {
-    color: #475569;
+.badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 6px 14px;
+    border: 2px solid var(--color-emerald);
+    border-radius: 9999px;
+    margin-bottom: 24px;
+    background-color: var(--color-white);
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    letter-spacing: -1px;
+}
+
+.hero-title .highlight {
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;
+}
+
+.hero-subtitle {
+    font-size: 19px;
+    font-weight: 500;
+    max-width: 580px;
+    margin-bottom: 32px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   BUTTONS (2 WARNA)
+   ========================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 26px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    text-decoration: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary {
+    background-color: var(--color-emerald);
+    color: var(--color-white);
+    border: 2px solid var(--color-emerald);
+    box-shadow: 4px 4px 0 var(--color-emerald);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-white);
+    color: var(--color-emerald);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--color-emerald);
+}
+
+.btn-primary:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color-emerald);
+}
+
+.btn-outline {
+    background-color: var(--color-white);
+    color: var(--color-emerald);
+    border: 2px solid var(--color-emerald);
+    box-shadow: 4px 4px 0 var(--color-emerald);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-emerald);
+    color: var(--color-white);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--color-emerald);
+}
+
+.btn-outline:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color-emerald);
+}
+
+/* ==========================================================================
+   CARDS & SECTIONS
+   ========================================================================== */
+.card {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-emerald);
+    border-radius: 18px;
+    padding: 40px 36px;
+    box-shadow: 6px 6px 0 var(--color-emerald);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 var(--color-emerald);
+}
+
+.section-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    border: 1.5px solid var(--color-emerald);
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.card h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+}
+
+.card p {
     font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 24px;
 }
 
-/* Form input pada bagian kontak */
+/* Skill Tags */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border: 2px solid var(--color-emerald);
+    border-radius: 8px;
+    background-color: var(--color-white);
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    background-color: var(--color-emerald);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   CONTACT FORM
+   ========================================================================== */
+.contact-desc {
+    margin-bottom: 20px;
+}
+
 .form-box {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    gap: 12px;
     flex-wrap: wrap;
-    margin-top: 15px;
+    margin-top: 8px;
 }
 
 input {
-    padding: 10px 14px;
-    width: 260px;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
+    flex: 1;
+    min-width: 240px;
+    padding: 13px 18px;
     font-size: 15px;
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--color-emerald);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-emerald);
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 var(--color-emerald);
     outline: none;
+    transition: all 0.2s ease;
+}
+
+input::placeholder {
+    color: var(--color-emerald);
+    opacity: 0.65;
+    font-weight: 500;
 }
 
 input:focus {
-    border-color: #2563eb;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--color-emerald);
 }
 
-/* Paragraf hasil interaksi JavaScript */
+/* Area Hasil Interaksi JS */
+.result-wrapper {
+    margin-top: 24px;
+    min-height: 48px;
+}
+
 #result {
-    margin-top: 18px;
-    font-weight: 600;
-    font-size: 16px;
-    color: #2563eb;
-    min-height: 24px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-emerald);
+    transition: all 0.3s ease;
 }
 
-/* Footer bagian bawah */
-footer {
-    text-align: center;
-    padding: 24px;
-    background-color: #0f172a;
-    color: #94a3b8;
-    margin-top: 40px;
+#result.show {
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 2px solid var(--color-emerald);
+    box-shadow: 4px 4px 0 var(--color-emerald);
+    background-color: var(--color-white);
+    animation: popIn 0.25s ease forwards;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+    margin-top: auto;
+    background-color: var(--color-emerald);
+    color: var(--color-white);
+    border-top: 2px solid var(--color-emerald);
+    padding: 28px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
     font-size: 14px;
+    font-weight: 600;
+}
+
+.palette-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border: 2px solid var(--color-white);
+    border-radius: 9999px;
+    background-color: var(--color-emerald);
+}
+
+.color-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-emerald {
+    background-color: var(--color-emerald);
+    border: 2px solid var(--color-white);
+}
+
+.dot-white {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-white);
+}
+
+.color-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 640px) {
+    .navbar {
+        flex-direction: column;
+        gap: 14px;
+        padding: 14px 16px;
+    }
+
+    .hero-title {
+        font-size: 34px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .card {
+        padding: 24px 20px;
+    }
+
+    .form-box {
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
 }

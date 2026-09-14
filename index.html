@@ -3,54 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Saya</title>
+    <meta name="description" content="Portfolio dan website pribadi Hernan - Web Developer. Dibangun dengan desain minimalis 2 warna modern.">
+    <title>Hernan | Portfolio - Web Development</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigasi Sederhana -->
-    <nav>
-        <h2>MyWebsite</h2>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Navigasi Utama -->
+    <header class="navbar-wrapper">
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="logo">
+                <span class="logo-mark">H</span>
+                <span class="logo-text">Hernan<span>.dev</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Bagian Home (Hero) -->
-    <section id="home" class="hero">
-        <h1>Halo, Saya <span>Hernan</span> 👋</h1>
-        <p>Saya sedang belajar Web Development dari 0.</p>
-        <button onclick="showMessage()">Klik Saya</button>
-    </section>
+    <main>
+        <!-- Bagian Home (Hero) -->
+        <section id="home" class="hero section">
+            <div class="container hero-container">
+                <div class="badge">🌱 WEB DEVELOPMENT JOURNEY</div>
+                <h1 class="hero-title">Halo, Saya <span class="highlight">Hernan</span> 👋</h1>
+                <p class="hero-subtitle">Saya sedang belajar Web Development dari 0 untuk menciptakan karya digital berkualitas.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="showMessage()" id="hero-btn">Klik Saya</button>
+                    <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- Bagian Tentang Saya -->
-    <section id="about" class="about">
-        <h2>Tentang Saya</h2>
-        <p>
-            Saya tertarik mempelajari teknologi, website,
-            dan bagaimana sebuah aplikasi dibuat.
-        </p>
-    </section>
+        <!-- Bagian Tentang Saya -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="card about-card">
+                    <span class="section-tag">TENTANG SAYA</span>
+                    <h2>Membangun dari Fondasi</h2>
+                    <p>
+                        Saya tertarik mempelajari teknologi, website, dan bagaimana sebuah aplikasi digital dibuat
+                        dari baris kode sederhana hingga menjadi sistem yang interaktif dan bermanfaat.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Responsive UI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Bagian Kontak Interaktif -->
-    <section id="contact" class="contact">
-        <h2>Hubungi Saya</h2>
-        <div class="form-box">
-            <input type="text" id="name" placeholder="Masukkan nama kamu...">
-            <button onclick="greetUser()">Sapa Saya</button>
-        </div>
-        <!-- Tempat menampilkan hasil dari JavaScript -->
-        <p id="result"></p>
-    </section>
+        <!-- Bagian Kontak Interaktif -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="card contact-card">
+                    <span class="section-tag">INTERAKTIF</span>
+                    <h2>Hubungi Saya</h2>
+                    <p class="contact-desc">Ketik nama kamu di bawah ini untuk memulai percakapan interaktif:</p>
+                    
+                    <div class="form-box">
+                        <input type="text" id="name" placeholder="Masukkan nama kamu..." autocomplete="off">
+                        <button class="btn btn-primary" onclick="greetUser()" id="greet-btn">Sapa Saya</button>
+                    </div>
+                    
+                    <!-- Tempat menampilkan hasil dari JavaScript -->
+                    <div class="result-wrapper">
+                        <p id="result" role="status" aria-live="polite"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
-        <p>© 2026 MyWebsite</p>
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2026 Hernan.dev — Didesain dengan palet 2 warna (Hijau Emerald & Putih).</p>
+            <div class="palette-indicator" title="2 Warna Utama: Hijau Emerald & Putih">
+                <span class="color-dot dot-emerald"></span>
+                <span class="color-dot dot-white"></span>
+                <span class="color-label">Palet 2 Warna</span>
+            </div>
+        </div>
     </footer>
 
-    <!-- Penghubung ke file JavaScript (tanpa spasi di nama file) -->
+    <!-- Penghubung ke file JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
