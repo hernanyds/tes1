@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Saya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi Sederhana -->
+    <nav>
+        <h2>MyWebsite</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Bagian Home (Hero) -->
+    <section id="home" class="hero">
+        <h1>Halo, Saya <span>Hernan</span> 👋</h1>
+        <p>Saya sedang belajar Web Development dari 0.</p>
+        <button onclick="showMessage()">Klik Saya</button>
+    </section>
+
+    <!-- Bagian Tentang Saya -->
+    <section id="about" class="about">
+        <h2>Tentang Saya</h2>
+        <p>
+            Saya tertarik mempelajari teknologi, website,
+            dan bagaimana sebuah aplikasi dibuat.
+        </p>
+    </section>
+
+    <!-- Bagian Kontak Interaktif -->
+    <section id="contact" class="contact">
+        <h2>Hubungi Saya</h2>
+        <div class="form-box">
+            <input type="text" id="name" placeholder="Masukkan nama kamu...">
+            <button onclick="greetUser()">Sapa Saya</button>
+        </div>
+        <!-- Tempat menampilkan hasil dari JavaScript -->
+        <p id="result"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 MyWebsite</p>
+    </footer>
+
+    <!-- Penghubung ke file JavaScript (tanpa spasi di nama file) -->
+    <script src="script.js"></script>
+</body>
+</html>
