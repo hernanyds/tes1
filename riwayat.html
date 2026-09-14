@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Riwayat Pekerjaan dan Pengalaman Profesional Hernan. Dibuat oleh Yanto dalam simulasi kolaborasi branch Git.">
+    <title>Hernan | Riwayat Pekerjaan - Fitur Kolaborasi Yanto</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi Utama -->
+    <header class="navbar-wrapper">
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="logo" id="nav-logo">
+                <span class="logo-mark">H</span>
+                <span class="logo-text">Hernan<span>.dev</span></span>
+            </a>
+            <div class="nav-actions">
+                <span class="collab-badge">🤝 Fitur oleh Yanto</span>
+                <a href="index.html" class="btn btn-outline nav-back-btn" id="nav-back-btn">⬅ Kembali ke Beranda</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section Riwayat Kerja -->
+        <section class="hero-section section">
+            <div class="container hero-container">
+                <div class="branch-tag" id="git-branch-badge">
+                    <span class="branch-icon">🌿</span> branch: feature/yanto-riwayat-pekerjaan
+                </div>
+                <h1 class="page-title">Riwayat Pekerjaan <span class="highlight">Hernan</span></h1>
+                <p class="page-subtitle">
+                    Halaman ini dibuat oleh <strong>Yanto</strong> sebagai bagian dari simulasi kolaborasi Git Branching. 
+                    Berikut adalah rekam jejak perjalanan profesional dan proyek yang ditekuni Hernan.
+                </p>
+
+                <!-- Statistik Ringkas -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-num">2+</span>
+                        <span class="stat-label">Tahun Eksplorasi Web</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">10+</span>
+                        <span class="stat-label">Proyek & Latihan Selesai</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Dedikasi Belajar Koding</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter & Timeline Section -->
+        <section class="experience-section section">
+            <div class="container">
+                
+                <!-- Filter Kategori -->
+                <div class="filter-wrapper">
+                    <span class="filter-label">Filter Riwayat:</span>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all" id="filter-all">Semua</button>
+                        <button class="filter-btn" data-filter="work" id="filter-work">Pekerjaan</button>
+                        <button class="filter-btn" data-filter="project" id="filter-project">Proyek</button>
+                        <button class="filter-btn" data-filter="education" id="filter-education">Pendidikan</button>
+                    </div>
+                </div>
+
+                <!-- Timeline Container -->
+                <div class="timeline" id="timeline-list">
+
+                    <!-- Item 1: Pekerjaan Terkini -->
+                    <article class="timeline-item" data-category="work">
+                        <div class="timeline-marker">
+                            <span class="marker-dot"></span>
+                        </div>
+                        <div class="timeline-content card">
+                            <div class="timeline-header">
+                                <span class="badge-role">Pekerjaan</span>
+                                <span class="period">2024 — Sekarang</span>
+                            </div>
+                            <h2 class="role-title">Junior Web Developer (Self-Development & Freelance)</h2>
+                            <p class="company-name">💻 Hernan Digital Craft</p>
+                            <p class="role-description">
+                                Berfokus membangun antarmuka web yang bersih, responsif, dan interaktif. 
+                                Mempelajari arsitektur CSS modern, manipulasi DOM JavaScript, 
+                                serta alur kerja Git & GitHub untuk kolaborasi tim profesional.
+                            </p>
+                            <div class="skill-tags">
+                                <span class="tag">HTML5 Semantik</span>
+                                <span class="tag">Modern Vanilla CSS</span>
+                                <span class="tag">JavaScript ES6</span>
+                                <span class="tag">Git & GitHub</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Item 2: Proyek Kolaborasi -->
+                    <article class="timeline-item" data-category="project">
+                        <div class="timeline-marker">
+                            <span class="marker-dot"></span>
+                        </div>
+                        <div class="timeline-content card">
+                            <div class="timeline-header">
+                                <span class="badge-role">Proyek Kolaborasi</span>
+                                <span class="period">2024</span>
+                            </div>
+                            <h2 class="role-title">Simulasi Kolaborasi Branching Website (Hernan & Yanto)</h2>
+                            <p class="company-name">🤝 Proyek Belajar Git Bersama</p>
+                            <p class="role-description">
+                                Menerapkan konsep branch terpisah (<code class="code-inline">feature/yanto-riwayat-pekerjaan</code>) 
+                                untuk menambahkan halaman baru tanpa mengganggu branch utama (<code class="code-inline">main</code>).
+                                Mengasah keterampilan merge, pull request, dan koordinasi kode tim.
+                            </p>
+                            <div class="skill-tags">
+                                <span class="tag">Git Branching</span>
+                                <span class="tag">Pull Request</span>
+                                <span class="tag">Code Review</span>
+                                <span class="tag">Multi-page Navigation</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Item 3: Pekerjaan Sebelumnya / IT Support -->
+                    <article class="timeline-item" data-category="work">
+                        <div class="timeline-marker">
+                            <span class="marker-dot"></span>
+                        </div>
+                        <div class="timeline-content card">
+                            <div class="timeline-header">
+                                <span class="badge-role">Pekerjaan</span>
+                                <span class="period">2023 — 2024</span>
+                            </div>
+                            <h2 class="role-title">IT Support & Website Maintenance Specialist</h2>
+                            <p class="company-name">🏢 Tech & Digital Services</p>
+                            <p class="role-description">
+                                Bertanggung jawab memastikan sistem operasional berjalan lancar, 
+                                pemeliharaan website berkala, troubleshooting perangkat keras & jaringan, 
+                                serta berinteraksi langsung membantu kebutuhan teknis klien dan tim.
+                            </p>
+                            <div class="skill-tags">
+                                <span class="tag">Troubleshooting IT</span>
+                                <span class="tag">Web Maintenance</span>
+                                <span class="tag">Network Basics</span>
+                                <span class="tag">Customer Support</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Item 4: Pendidikan -->
+                    <article class="timeline-item" data-category="education">
+                        <div class="timeline-marker">
+                            <span class="marker-dot"></span>
+                        </div>
+                        <div class="timeline-content card">
+                            <div class="timeline-header">
+                                <span class="badge-role">Pendidikan</span>
+                                <span class="period">2020 — 2024</span>
+                            </div>
+                            <h2 class="role-title">Sarjana / Studi Teknologi Informasi</h2>
+                            <p class="company-name">🎓 Fakultas Ilmu Komputer</p>
+                            <p class="role-description">
+                                Mempelajari fondasi ilmu komputer, logika pemrograman, rekayasa perangkat lunak,
+                                basis data, dan dasar-dasar perancangan antarmuka pengguna (UI/UX).
+                            </p>
+                            <div class="skill-tags">
+                                <span class="tag">Algoritma & Pemrograman</span>
+                                <span class="tag">Sistem Basis Data</span>
+                                <span class="tag">UI/UX Basics</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Penjelasan Git Collab (Edukasi Interaktif) -->
+        <section class="git-info-section section">
+            <div class="container">
+                <div class="card collab-explanation-card">
+                    <span class="section-tag">CATATAN YANTO 📝</span>
+                    <h2>Bagaimana Fitur Ini Ditambahkan?</h2>
+                    <p>
+                        Halo Hernan! Saya (Yanto) membuat halaman baru <code>riwayat.html</code> dan menghubungkannya 
+                        ke <code>index.html</code>, <code>style.css</code>, dan <code>script.js</code> yang sudah ada. 
+                        Dengan Git Branching, kita tidak perlu memisah folder per orang. Cukup buat branch baru, 
+                        lakukan perubahan pada file proyek, lalu satukan kembali melalui <em>Merge</em>!
+                    </p>
+                    <div class="git-commands-box">
+                        <p class="code-title">📌 Perintah Git yang dipakai Yanto:</p>
+                        <pre><code># 1. Yanto membuat branch baru
+git checkout -b feature/yanto-riwayat-pekerjaan
+
+# 2. Yanto menambahkan file baru & commit perubahan
+git add .
+git commit -m "feat: tambah halaman riwayat.html oleh Yanto"
+
+# 3. Yanto kirim branch ke GitHub
+git push -u origin feature/yanto-riwayat-pekerjaan</code></pre>
+                    </div>
+                    <div class="bottom-cta">
+                        <a href="index.html" class="btn btn-primary" id="btn-back-bottom">⬅ Kembali ke Beranda Hernan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2026 Hernan.dev — Halaman Riwayat dibuat oleh Yanto via Kolaborasi Git Branch.</p>
+            <div class="palette-indicator" title="2 Warna Utama: Hijau Emerald & Putih">
+                <span class="color-dot dot-emerald"></span>
+                <span class="color-dot dot-white"></span>
+                <span class="color-label">Palet 2 Warna</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript Bersama -->
+    <script src="script.js"></script>
+</body>
+</html>
